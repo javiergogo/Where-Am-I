@@ -40,11 +40,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate
     }
     
     //metodo para localizar si se actualizco la localizacio
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         //print(locations)
         
         //abrimos una variable con la localizacion, la cual ya tenemos de el metodo que se esta llamando
-        var userLocation:CLLocation = locations[0]
+        let userLocation:CLLocation = locations[0]
         
         //asignamos en el texto de la etiqueta, las latitudes las cuales se convirtieron a String
         //self.latitudLabel.text = String(userLocation.coordinate.latitude)

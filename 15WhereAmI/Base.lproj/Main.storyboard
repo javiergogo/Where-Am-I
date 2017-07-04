@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A291m" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,91 +19,123 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="On Toy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d79-qL-mNF">
-                                <rect key="frame" x="119" y="28" width="82" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DONDE ESTOY?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d79-qL-mNF">
+                                <rect key="frame" x="100.5" y="40" width="174.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitud" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnv-Vc-xaH">
-                                <rect key="frame" x="20" y="85" width="85" height="21"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i4j-AL-sPX">
+                                <rect key="frame" x="31" y="89" width="313" height="350"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0bh-kM-3ZH">
+                                        <rect key="frame" x="0.0" y="0.0" width="156.5" height="350"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitud" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnv-Vc-xaH">
+                                                <rect key="frame" x="0.0" y="0.0" width="156.5" height="70"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="0.079616970486111105" blue="0.4501681857638889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitud" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKQ-s8-Ouw">
+                                                <rect key="frame" x="0.0" y="70" width="156.5" height="70"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="0.079616970486111105" blue="0.4501681857638889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sji-SZ-3lw">
+                                                <rect key="frame" x="0.0" y="140" width="156.5" height="70"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="0.079616970486111105" blue="0.4501681857638889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velocidad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="541-3P-MZw">
+                                                <rect key="frame" x="0.0" y="210" width="156.5" height="70"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="0.079616970486111105" blue="0.4501681857638889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altitud" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9p7-FQ-OZy">
+                                                <rect key="frame" x="0.0" y="280" width="156.5" height="70"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="0.079616970486111105" blue="0.4501681857638889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="abH-G9-Hqo">
+                                        <rect key="frame" x="156.5" y="0.0" width="156.5" height="350"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO5-FM-yjY">
+                                                <rect key="frame" x="0.0" y="0.0" width="156.5" height="70"/>
+                                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="18"/>
+                                                <color key="textColor" red="0.75254991319444442" green="0.56735568576388884" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM0-h5-3bY">
+                                                <rect key="frame" x="0.0" y="70" width="156.5" height="70"/>
+                                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="18"/>
+                                                <color key="textColor" red="0.75254991319444442" green="0.56735568576388884" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6q-Z8-Kqu">
+                                                <rect key="frame" x="0.0" y="140" width="156.5" height="70"/>
+                                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="18"/>
+                                                <color key="textColor" red="0.75254991319444442" green="0.56735568576388884" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvD-i7-OtE">
+                                                <rect key="frame" x="0.0" y="210" width="156.5" height="70"/>
+                                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="18"/>
+                                                <color key="textColor" red="0.75254991319444442" green="0.56735568576388884" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxw-5o-Drk">
+                                                <rect key="frame" x="0.0" y="280" width="156.5" height="70"/>
+                                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="18"/>
+                                                <color key="textColor" red="0.75254991319444442" green="0.56735568576388884" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="ve0-vG-cVL"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nearest Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZy-Ai-LJ1">
+                                <rect key="frame" x="129" y="456" width="117.5" height="19.5"/>
                                 <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitud" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKQ-s8-Ouw">
-                                <rect key="frame" x="20" y="109" width="85" height="21"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velocidad" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="541-3P-MZw">
-                                <rect key="frame" x="20" y="175" width="85" height="21"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Altitud" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9p7-FQ-OZy">
-                                <rect key="frame" x="20" y="219" width="85" height="21"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvq-Br-dTf">
-                                <rect key="frame" x="39" y="300" width="243" height="169"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvq-Br-dTf">
+                                <rect key="frame" x="87" y="485.5" width="200" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="WLW-AR-WDa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Curso" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sji-SZ-3lw">
-                                <rect key="frame" x="20" y="151" width="85" height="21"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO5-FM-yjY">
-                                <rect key="frame" x="124" y="86" width="158" height="21"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM0-h5-3bY">
-                                <rect key="frame" x="124" y="110" width="158" height="21"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvD-i7-OtE">
-                                <rect key="frame" x="124" y="176" width="158" height="21"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxw-5o-Drk">
-                                <rect key="frame" x="124" y="218" width="158" height="21"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6q-Z8-Kqu">
-                                <rect key="frame" x="124" y="152" width="158" height="21"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nearest Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZy-Ai-LJ1">
-                                <rect key="frame" x="101" y="271" width="118" height="21"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.63944973819971818" blue="0.21329389224950424" alpha="0.078954409246575347" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i4j-AL-sPX" firstAttribute="top" secondItem="d79-qL-mNF" secondAttribute="bottom" constant="20" id="2fa-pN-s3E"/>
+                            <constraint firstItem="i4j-AL-sPX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="DsR-U2-ooN"/>
+                            <constraint firstItem="wZy-Ai-LJ1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NHn-jn-Yec"/>
+                            <constraint firstItem="vvq-Br-dTf" firstAttribute="top" secondItem="wZy-Ai-LJ1" secondAttribute="bottom" constant="10" id="O9y-Bv-XcH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i4j-AL-sPX" secondAttribute="trailing" constant="15" id="RQT-bH-lGi"/>
+                            <constraint firstItem="d79-qL-mNF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="UtI-sV-1kn"/>
+                            <constraint firstItem="vvq-Br-dTf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="icd-LM-bBf"/>
+                            <constraint firstItem="wZy-Ai-LJ1" firstAttribute="top" secondItem="i4j-AL-sPX" secondAttribute="bottom" constant="17" id="kCu-LM-8Rz"/>
+                            <constraint firstItem="d79-qL-mNF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uIf-8e-lcu"/>
+                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="addressLabel" destination="vvq-Br-dTf" id="Pff-5x-4Xv"/>
                         <outlet property="altitudLabel" destination="fxw-5o-Drk" id="ikq-uU-gJF"/>
@@ -110,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="211"/>
+            <point key="canvasLocation" x="380" y="210.94452773613196"/>
         </scene>
     </scenes>
 </document>

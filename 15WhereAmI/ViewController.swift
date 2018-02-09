@@ -11,7 +11,8 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate
 {
-    var manager:CLLocationManager!
+    //Declare variable type CLLLocationManager
+    var manager:CLLocationManager = CLLocationManager()
 
     @IBOutlet var latitudLabel: UILabel!
     @IBOutlet var longitudLabel: UILabel!
@@ -20,56 +21,40 @@ class ViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet var altitudLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     
-    
-    
-    
     override func viewDidLoad()
     {
-        //asignando valor a manager, el valor de el metodo CLLocation, dara la localizacion y mas datos
-        manager = CLLocationManager()
-        // manager controlara o delegara el uiviewcontroller
         manager.delegate = self
-        //nos dara la localizacion gps mejor encontrada
+        //Gives the most aqurated localization
         manager.desiredAccuracy - kCLLocationAccuracyBest
-        //mostrar el mensaje que introdujimos en info.plist para el usuario, donde solicitamos
+        
+        //Show message to user, why are we requesting localization
         manager.requestWhenInUseAuthorization()
         
+        //Keep updating localization
         manager.startUpdatingLocation()
-        
         super.viewDidLoad()
     }
     
-    //metodo para localizar si se actualizco la localizacio
+    //If there's an update then trigger function
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //print(locations)
+        print(locations)
         
-        //abrimos una variable con la localizacion, la cual ya tenemos de el metodo que se esta llamando
+        //New variable type CLLocation with locations in it
         let userLocation:CLLocation = locations[0]
         
-        //asignamos en el texto de la etiqueta, las latitudes las cuales se convirtieron a String
-        //self.latitudLabel.text = String(userLocation.coordinate.latitude)
         self.latitudLabel.text = "\(userLocation.coordinate.latitude)"
-
-        //la misma asignacion pero diferente metodo para convertir, se abre una cadena y se concatena otro tipo de variable
         self.longitudLabel.text = "\(userLocation.coordinate.longitude)"
-        
         self.cursoLabel.text = "\(userLocation.course)"
-        
         self.velocidadLabel.text = "\(userLocation.speed)"
-        
         self.altitudLabel.text = "\(userLocation.altitude)"
         
-        
-        
-        //GEOCODER es tomar una direccion y convertirla en coordenadas
-        //geocoderreverse es tomar coordenada para mostrar o hacer una direccion
-        
+        //GEOCODER tale an address and convert to coordenates
+        //GEOCODEREVERSE opposite
         CLGeocoder().reverseGeocodeLocation(userLocation, completionHandler: { (placemarks, error) -> Void in
           
             if (error != nil)
             {
-                
-                print(error)
+                print(error!)
             }
             else
             {
@@ -81,25 +66,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate
                     {
                         numeroStreet = (p.subThoroughfare)!
                     }
-                    //localty es ciudad
-                    //subadministrativearea es  condado
-                    //subLocality es el area o distrito
-                    //administrativeArea estado
+                    //localty city
+                    //subadministrativearea county
+                    //subLocality area/district
+                    //administrativeArea state
                     self.addressLabel.text = " \(numeroStreet) \(p.subLocality!) \n \(p.locality!) \(p.subAdministrativeArea!), \n \(p.administrativeArea!) \(p.country!) \n \(p.postalCode!), "
 
                 }
             }
-            
-        })
-
-  
+        }) //End GEOCODER
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
